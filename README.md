@@ -30,3 +30,5 @@ bitte 5 minutige Pause nach jeder 45-Minuten -> 45 - 5 - 45
 - `git push` => syncs with github
 
 
+## run python programm
+- `nodemon index.py` => restarts program after file change detection
