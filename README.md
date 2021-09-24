@@ -20,10 +20,11 @@ bitte 5 minutige Pause nach jeder 45-Minuten -> 45 - 5 - 45
 
 ## Git
 - `git init` -> creates new local git repository (contains a .git folder)
+- `git log` => shows commited history with commit messages and date, author stuff
 
 #### Git commit flow
 - `git status` -> shows status of current local git repository
-- `git diff` => zeigt current changes in der Datei 
+- `git diff` => shows current changes in all files in working directory (subset of changes and not whole project-directory)
 - `git add README.md` -> adds one file to next commit stage (put the changes on the busstop)
 - `git commit -m "your changelogs details"` => makes a commit with a commit message. All staged files will be included. Also partial commits are possible.
 - `git push` => syncs with github
