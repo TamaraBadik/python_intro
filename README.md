@@ -4,13 +4,15 @@
 - ca 3h visualisation with javascript & Tableu
 - ca. 10h data-science mit  tensorflow, plot-visualisations, model design, regression, neural-networks, Deep Computer Vision, Natural Language Processing und Reinforcement Learning (Die Grundlagen der gängigen Machine Learning-Algorithmen)
 
-bis jetzt 3 UE + 15 min. 
+Stad 26.09.-> 5 UE. 
 bitte 5 minutige Pause nach jeder 45-Minuten -> 45 - 5 - 45 
 
 ## Terminal
 - `dir` -> zeigt die Ordnerihnhalte
 - `cd` -> change directory
-- `cd` .. -> wechsele Directory ein Ordner hoch 
+- `cd ..` -> wechsele Directory ein Ordner hoch
+- `cd ..\..` ->  wechsele Directory ZWEI Ordnern hoch (grant-parent directory)
+- `cd \` -> wechsele to the ROOT directory
 - `cd FOLDER_NAME` -> enters the folder
 - `cd F` and press TAB => autocompletes to `cd FOLDER_NAME` if 
 - `cd ..\FOLDER_NAME\` -> go 1 Folder up and one folder down  
