@@ -9,7 +9,7 @@ name = "Tamara" # declare a string variable with name `name` with value "Tamara"
 
 loggedIn = False # boolean variable type - just has two states: True or False
 
-user = ["Tamara", "Tommy", "Mary", "John"] # a basic list (array). Index 0 based
+user = ["Tamara", "Tommy", "Mary", "Lucy"] # a basic list (array). Index 0 based
 #print(user) # prints the list
 #print(user[0]) # access first (zero index) person in user array
 #print(user[3]) # access 4th person in human language - position/index 3
