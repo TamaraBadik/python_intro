@@ -7,7 +7,7 @@ name = "Tamara" # declare a string variable with name `name` with value "Tamara"
 #print(name + 2) # wrong because make mathematical operation with type string
 #print(number.upper()) # wrong because try to uppercase a number
 
-loggedIn = False # boolean variable type - just has two states: True or False
+loggedIn = True # boolean variable type - just has two states: True or False
 
 user = ["Tamara", "Tommy", "Mary", "Lucy"] # a basic list (array). Index 0 based
 #print(user) # prints the list
