@@ -1,12 +1,3 @@
-## General todos
-- ca. 5h basic git, python, data-structures, APIs, databases & webcraping
-- [ca 2h relational data (MySQL), aggregation, filter/sorting, Data Wrangling/Bereinigung]
-- ca 3h visualisation 
-- ca. 10h data-science mit  tensorflow, plot-visualisations, model design, regression, neural-networks, Deep Computer Vision, Natural Language Processing und Reinforcement Learning (Die Grundlagen der gängigen Machine Learning-Algorithmen)
-
-Stand 30.09.-> 11 UE. 
-bitte 5 minutige Pause nach jeder 45-Minuten -> 45 - 5 - 45 
-
 ## Terminal
 - `dir` -> zeigt die Ordnerihnhalte
 - `cd` -> change directory
