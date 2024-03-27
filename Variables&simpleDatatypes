@@ -1,4 +1,4 @@
-#####2. Erste Schritte
+#####2. Buch Eric Matthes
 print('Hello Python world!')
 message = 'Hey Python world!'
 print(message)
