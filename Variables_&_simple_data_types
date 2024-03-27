@@ -1,0 +1,132 @@
+#####2. Erste Schritte
+print('Hello Python world!')
+message = 'Hey Python world!'
+print(message)
+####2 Variablen und einfache Datentypen
+# Variablen dürfen nur Buchstaben, Ziffern und Unterstriche erhalten. 
+# Am Anfang darf keine Zahl stehen. 
+# Keine Leerzeichen
+# keine für Python reservierte Sclüßel-Wörte, z.B. "print"
+# Variablenamen kurz, aber aussagekräftig halten
+# Variablen sind Etiketten 
+message_1 = "hey" 
+print(message, message_1)
+# Datentyp "Strings" = > alles in Anführungszeichen (egal ob doppelt oder 
+# einfach). Dabei aufpassen auf die Anführungszeichen in Anführungszeichen-> 
+# sollen sich unterscheiden 
+print("The language 'Python' ist named after Monty Python, not the snake") 
+print('I told my friend "Python is my fav. language"')
+## Groß- und Kleinbuchstaben mithilfe von Methoden ändern
+# "title()" ist eine Methode; hinter einer Funktion steht immer ein Klammerpaar,
+# wo die zusätzliche Angaben kommen. Die funktion "title()" braucht jedoch keine
+# zusätzliche Angaben, weshalb die Klammern leer sind. 
+name = "ada love"
+print(name.title())
+# "upper()" und "lower()" sind ebenso Methoden für Buchstabenverwandlung
+name = "ada love"
+print(name.upper())
+print(name.lower())
+###Strings
+## Variablen in String verwenden
+first_name = "ada" 
+last_name = "love"
+full_name = f"{first_name} {last_name}"
+print(full_name)
+# die String ist F-String. F für "Formatierung". 
+first_name = "ada" 
+last_name = "love"
+full_name = f"{first_name} {last_name}"
+print(f"Hello, {full_name.title()}!")
+#oder
+first_name = "ada" 
+last_name = "love"
+full_name = f"{first_name} {last_name}"
+message = f"Hello, {full_name.title()}!"
+print(message)
+##Weißraum hinzufügen
+#Weißraum => Leerzeichen, Tabulatoren, Zeilenumbrüche
+# für Tabulator "\t" verwenden
+print("Python")
+print("\tPython")
+#Zeilenumbruch => "\n"
+print("Languages: \nPython\nC\nJavaScript")
+#Tabulator und Zeilenumbruch Kombinieren "\n\t"
+print("Languages: \n\tPython\n\tC\n\tJavaScript")
+##Weißraum entfernen
+#"rstrip()" Methode entfernt den Weißraum RECHTS
+fav_language = "python "
+print(fav_language)
+print(fav_language.rstrip())
+#allerdings es entfernt den Weißraum nur vorrübergehend. Den Weißraum entgültig 
+# zu entfernen, muss man den bereinigten Wert der Variablen zuweisen
+fav_language = "python "
+fav_language = fav_language.rstrip()
+print(fav_language)
+#"lstrip()" Methode entfernt entfernt den Weißraum LINKS
+fav_language = " python"
+fav_language = fav_language.lstrip()
+print(fav_language)
+#"strip()" entfernt den Weißraum von beiden Enden
+fav_language = " python "
+fav_language = fav_language.strip()
+print(fav_language)
+##Syntaxfehler bei der Stringverarbeitung vermeiden
+message = "one of python's strenghts is its diverse community."
+print(message)
+#bei einfachen Anführungszeichen kann Python nicht erkennen, wo der String 
+# wirklich enden soll.
+#message = 'one of python's strenghts is its diverse community.'
+#print(message)'
+##Übungen
+#1
+# message = "Hello Eric, would you like to learn some Python today?"
+print(message)
+message = 'Hello Eric, would you like to learn some Python today?'
+print(message)
+#2
+name = "eric brockovich"
+print(name.title())
+print(name.upper())
+print(name.lower())
+print('Albert Einstein once said, "A person who never made a mistake')
+print('never tried anything new."')
+
+#3
+famous_person = "Albert Einstein"
+print(f'{famous_person} said, "A person who never made a mistake never tried anything new."')
+#oder 
+famous_person = "Albert Einstein"
+message = f'{famous_person} said, "A person who never made a mistake never tried anything new."'
+print(message)
+#4
+name = " peter "
+print(f"\t{name.title()}")
+print(name.lstrip())
+print(name.rstrip().title())
+print(name.strip().upper())
+###Zahlen
+#Exponenten 
+print(3**2)
+print(10**6)
+#bei sehr großen Zahlen, kann man die der besseren Lesbarkeit halber 
+# Unterstriche als verwenden. Python ignoriert die Unterstriche beim Ausgabe. 
+universe_age = 14_000_000_000
+print(universe_age)
+##Mehrfachzuweisung
+# Die Variablennamen und die Werte müssen durch Komma getrennt werden
+x, y, z = 0, 1, 3 
+print(y)
+print(z)
+##Konstanten
+#Konstante =>Variable, deren Wert während der gesamten Lebensdauer des Programms
+# unverändert bleibt. Muss in Großbuchstaben geschriebn werden.
+#z.B. MAX_CONNECTIONS = 5000 
+##Übungen
+print(5+3)
+print(18-10)
+print(4*2)
+print(16/2)
+Meine_Lieblingszahl = 18
+print(f"My favourite number is {Meine_Lieblingszahl}")
+###The Zen of Python
+import this
