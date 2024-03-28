@@ -12,34 +12,34 @@ print(message)
 message_1 = "hey" 
 print(message, message_1)
 # Datentyp "Strings" = > alles in Anführungszeichen (egal ob doppelt oder 
-# einfach). Dabei aufpassen auf die Anführungszeichen in Anführungszeichen-> 
-# sollen sich unterscheiden 
+# einfach). Dabei aufpassen auf die Anführungszeichen-> 
+# diese sollen sich unterscheiden 
 print("The language 'Python' ist named after Monty Python, not the snake") 
 print('I told my friend "Python is my fav. language"')
 ## Groß- und Kleinbuchstaben mithilfe von Methoden ändern
 # "title()" ist eine Methode; hinter einer Funktion steht immer ein Klammerpaar,
 # wo die zusätzliche Angaben kommen. Die funktion "title()" braucht jedoch keine
 # zusätzliche Angaben, weshalb die Klammern leer sind. 
-name = "ada love"
+name = "ada dove"
 print(name.title())
 # "upper()" und "lower()" sind ebenso Methoden für Buchstabenverwandlung
-name = "ada love"
+name = "ada dove"
 print(name.upper())
 print(name.lower())
 ###Strings
 ## Variablen in String verwenden
 first_name = "ada" 
-last_name = "love"
+last_name = "dove"
 full_name = f"{first_name} {last_name}"
 print(full_name)
 # die String ist F-String. F für "Formatierung". 
 first_name = "ada" 
-last_name = "love"
+last_name = "dove"
 full_name = f"{first_name} {last_name}"
 print(f"Hello, {full_name.title()}!")
 #oder
 first_name = "ada" 
-last_name = "love"
+last_name = "dove"
 full_name = f"{first_name} {last_name}"
 message = f"Hello, {full_name.title()}!"
 print(message)
@@ -109,7 +109,7 @@ print(name.strip().upper())
 print(3**2)
 print(10**6)
 #bei sehr großen Zahlen, kann man die der besseren Lesbarkeit halber 
-# Unterstriche als verwenden. Python ignoriert die Unterstriche beim Ausgabe. 
+# Unterstriche verwenden. Python ignoriert die Unterstriche beim Ausgabe. 
 universe_age = 14_000_000_000
 print(universe_age)
 ##Mehrfachzuweisung
