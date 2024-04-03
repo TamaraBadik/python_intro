@@ -139,7 +139,6 @@ print(len(cars)) #oder gleich im Terminal ausgeben
 #Übungen
 travel_destinations = ['japan', 'armenia' , 'iran' , 'norway']
 print(travel_destinations)
-
 print(sorted(travel_destinations))
 
 sorted(travel_destinations)
