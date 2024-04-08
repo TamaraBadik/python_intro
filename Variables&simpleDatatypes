@@ -1,6 +1,6 @@
 #####2. Buch Eric Matthes
 print('Hello Python world!')
-message = 'Hi Python world!'
+message = 'Hey Python world!'
 print(message)
 ####2 Variablen und einfache Datentypen
 # Variablen dürfen nur Buchstaben, Ziffern und Unterstriche erhalten. 
