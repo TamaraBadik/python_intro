@@ -1,0 +1,210 @@
+#if-Anweisungen
+age = 17
+if age >= 18:
+    print("You are old enough to vote!")
+    print("Have you registered to vote yet?")
+else: 
+    print("Sorry, you are too young to vote.")
+    print("Please register to vote as soon as you turn 18!")
+#if-elif-else
+age = 3
+if age < 4:
+    print("Your admission cost is $0.")
+elif age <18:
+    print("Your admission cost is $25.")
+else:
+    print("Your admission cost is $40.")
+age = 12
+if age <4:
+    price = 0
+elif age < 18:
+    price = 25
+else:
+    price = 40
+print(f"Your admission cost ${price}.")
+#Mehrere elif Blöcke
+age = 65
+if age <4:
+    price = 0
+elif age < 18:
+    price = 25
+elif age >= 65:
+    price = 40
+else:
+    price = 20
+print(f"Your admission cost ${price}.")
+#else Block weglassen-> die else Block ist eine Sammelanweisung für alle 
+# Bedingungen, die die spezifischen if- und elif-Tests nicht erfüllt haben. Dies
+# kann auch ungültige oder schädliche Daten einschließen. Lieber auf else 
+# verzichten. Gibt auch mehr Sicherheit für die richtige Bedingungen.
+age = 12
+if age <4:
+    price = 0
+elif age < 18:
+    price = 25
+elif age < 65:
+    price = 40
+elif age >= 65:
+    price = 20
+print(f"Your admission cost ${price}.")
+#Mehrere Bedingungen mit if ohne elif- und else-Blöcke prüfen: sinnvoll, wenn 
+# mehr als eine Bedingung wahr sein kann und bei jeder erfüllten Bedingung eine 
+# Aktion folgen soll:
+requested_toppings = ['mushrooms', 'extra cheese']
+if 'mushrooms' in requested_toppings:
+    print("Adding mushrooms.")
+if 'pepperoni' in requested_toppings:
+    print("Adding pepperoni.")
+if 'extra cheese' in requested_toppings:
+    print("Adding extra cheese.")
+print("\nFinished making your pizza!")
+#mit einem if-elif-else Code würde die Code nicht wie absichtigt funktionieren, 
+# da er keine weiteren Bedingungen mehr prüft, sobald eine erfüllt ist.
+#Übungen
+alien_color = 'green'
+if alien_color == 'green':
+    print("You just earned 5 points!")
+alien_color = 'green'
+if alien_color == 'green':
+    print("\nYou just earned 5 points!")
+else:
+    print("\nYou earned 10 points!")
+alien_color = 'red'
+if alien_color == 'green':
+    print("\nYou just earned 5 points!")
+else:
+    print("\nYou earned 10 points!")
+#5-5
+alien_color = 'green'
+if alien_color == 'green':
+    print("You have earned 5 points!")
+elif alien_color == 'yellow':
+    print("\nYou just earned 10 points!")
+else:
+    print("\nYou earned 15 points!")
+alien_color = 'yellow'
+if alien_color == 'green':
+    print("You have earned 5 points!")
+elif alien_color == 'yellow':
+    print("\nYou just earned 10 points!")
+else:
+    print("\nYou earned 15 points!")
+alien_color = 'red'
+if alien_color == 'green':
+    print("You have earned 5 points!")
+elif alien_color == 'yellow':
+    print("\nYou just earned 10 points!")
+else:
+    print("\nYou earned 15 points!")
+
+#5-6
+age = 2
+if age <= 2:
+    print("You are a baby!")
+elif age <= 4: 
+    print("You are a toddler!")
+elif age <= 13:
+    print("You are a kid!")
+elif age <= 20:
+    print("You are a teenager!")
+elif age <= 65:
+    print("You are a adult!")
+else:
+    print("You are an elder!")
+
+age = 66
+if age <= 2:
+    name = 'a baby'
+elif age <= 4: 
+    name = 'a toddler'
+elif age <= 13:
+    name = 'a kid'
+elif age <= 20:
+    name = 'a teenager'
+elif age <= 65:
+    name = 'an adult'
+else:
+    name = 'an elder'
+print(f"You are {name}!")
+
+#5-7
+favorite_fruits = ['honeymelone', 'pomegranate', 'apple', 'kiwis']
+if 'honeymelone' in favorite_fruits:
+    print("You really like honeymelone!")
+if "banana" in favorite_fruits:
+    print("You really like pomegranate")
+if "apple" in favorite_fruits:
+    print("You really like apple!")
+if "peaches" in favorite_fruits:
+    print("You really like peaches!")
+
+#if Anweisungen für Listen
+#Prüfung auf besondere ELemente
+requested_toppings = ['mushrooms', 'green peppers', 'extra cheese']
+for requested_topping in requested_toppings:
+    if requested_topping == "green peppers":
+        print("Sorry, we are out of green peppers right now.")
+    else: 
+        print(f'Adding {requested_topping}.')
+print("\nFinished making your pizza.")
+#Prüfung auf nicht leere Liste:
+requested_toppings = []
+if requested_toppings:
+    for requested_topping in requested_toppings:
+        print(f"Adding {requested_topping}.")
+    print("\nFinished making your pizza.")
+else:
+    print("Are you sure you want a plain pizza?")
+#Mehrere Listen verwenden
+available_toppings = ['mushrooms', 'olives', 'green peppers',
+'pepperoni', 'pinapple', 'extra cheese']
+requested_toppings = ['mushrooms', 'french fries', 'extra cheese']
+for requested_topping in requested_toppings:
+    if requested_topping in available_toppings:
+        print(f"Adding {requested_topping}.")
+    else: 
+        print(f"Sorry, we don't have {requested_topping}!")
+print("\nFinished making your pizza!")
+
+#übungen
+#5-8: Hello Admin
+user_names = ['eric', 'willie', 'admin', 'erin', 'ever']
+for user_name in user_names:
+    if user_name == 'admin':
+        print("Hello admin, would you like to see a status report?")
+    else:
+        print(f"Hello {user_name.title()}, thank you for logging in again.")
+#5-9: No Users
+user_names = []
+if user_names:
+    for user_name in user_names:
+        if user_name == 'admin':
+            print("Hello admin, would you like to see a status report?")
+        else:
+            print(f"Hello {user_name.title()}, thank you for logging in again.")
+else:
+    print("We need to find some users!")
+
+#5-10: Checking Usernames
+current_users = ['eric', 'willie', 'admin', 'erin', 'Ever']
+new_users = ['sarah', 'Willie', 'PHIL', 'ever', 'Iona']
+
+current_users_lower = [user.lower() for user in current_users]
+
+for new_user in new_users:
+    if new_user.lower() in current_users_lower:
+        print(f"Sorry {new_user}, that name is taken.")
+    else:
+        print(f"Great, {new_user} is still available.")
+
+#5-10: Ordinal Numbers
+numbers = list(range(1,10))
+for number in numbers:
+    if number == 1:
+        print('1st')
+    elif number == 2:
+        print('2nd')
+    elif number == 3:
+        print('3rd')
+    else:
+        print(f"{number}th")
