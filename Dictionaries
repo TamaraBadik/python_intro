@@ -1,0 +1,504 @@
+#Buch_Python3_Crashcourse_4: Dictionaries
+#A dictionary is a set of items; each item consists of a key and a value. 
+#You define a dictionary using braces:
+from typing import ValuesView
+
+
+alien_0 = {'color': 'green', 'points': 5}
+print(alien_0['color'])
+print(alien_0['points'])
+#You access a value associated with a key by stating the dictionary name, 
+#followed by the key in brackets:
+alien_0 = {'color': 'green', 'points': 5}
+print(alien_0['color'])
+new_points = alien_0['points']
+print(f"You just earned {new_points} points")
+#Adding new key-value pair an existing dictionary by placing the new key in 
+# brackets and providing the value. 
+alien_0['x_posotion'] = 0
+alien_0['y_position'] = 25
+print(alien_0)
+#Adding to an empty dictionary
+alien_0 = {}
+alien_0['color'] = 'green'
+alien_0['points'] = 5 
+print(alien_0)
+#Changing values in a dictionary
+alien_0 = {'color': 'green'}
+print(f"The alian is {alien_0['color']}.")
+alien_0 = {'color': 'yellow'}
+print(f"The alien is now {alien_0['color']}.")
+alien_0 = {'x_position': 0, 'y_position': 25, 'speed': 'medium'}
+print(f"Original position: {alien_0['x_position']}")
+if alien_0['speed'] == "slow":
+    x_increment = 1
+elif alien_0['speed'] == 'medium':
+    x_increment = 2
+else: 
+    alien_0['speed'] = 'fast'
+    x_increment = 3
+alien_0['x_position'] = alien_0['x_position'] + x_increment
+print(f"New position: {alien_0['x_position']}")
+##Removing key-value pairs
+#You can remove any key-value pair you want from a dictionary. 
+# To do so use the del keyword and the dictionary name, followed by the key in 
+# square brackets. This will delete the key and its associated value.
+#Deleting a key-value pair 
+alien_0 = {'color': 'green', 'points': 5}
+print(alien_0)
+del alien_0['points']
+print(alien_0)
+
+##Looping through a dictionary
+#You can loop through a dictionary in three ways: 
+# you can loop through all the key-value pairs, all the keys, or all the values.
+# Dictionaries keep track of the order in which key-value pairs are added. 
+# If you want to process the information in a different order, you can sort the 
+# keys in your loop.
+#Looping through all key-value pairs
+fav_languages = {
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'ruby',
+    'phil': 'python',
+    }
+# Show one person's favorite language.
+language = fav_languages['sarah'].title()
+print(f"Sarah's favorite language is {language}.")
+#Accessing values
+#To access the value associated with an individual key give the name of the 
+# dictionary and then place the key in a set of square brackets. If the key 
+# you're asking for is not in the dictionary, an error will occur.
+'''
+>>>alien_0 = {'color': 'green', 'points': 5}
+>>>print(alien_0['points'])
+#As a result a traceback key error
+'''
+#Dictionary method get 
+# You can also use the get() method, which returns None instead of an error if 
+# the key doesn't exist. You can also specify a default value to use if the key
+# is not in the dictionary.
+alien_0 = {'color': 'green', 'speed': 'slow'}
+point_value = alien_0.get('points',)
+print(point_value)
+#or
+alien_0 = {'color': 'green', 'speed': 'slow'}
+point_value = alien_0.get('points', 'NO point value assigned.')
+print(point_value)
+#if there is a possibility that the key that you want to access doesn't exist, 
+# you should use the metod get instead of writing in square brackets.
+#Exercises
+#6-1: Person
+person = {
+    'first_name': 'peter', 
+    'last_name': 'erwig', 
+    'age': 32, 
+    'city': 'cologne',
+    }
+print(person['first_name'].title())
+print(person['last_name'].title())
+print(person['age'])
+print(person['city'].title())
+#6-2: Favorite numbers
+favorite_numbers = {
+    'peter': 32,
+    'mariam': 26,
+    'kolja': 38,
+    'miqayel': 2,
+    'lili': 38,
+    }
+
+num = favorite_numbers['peter']
+print(f"Peter's favorite number is {num}.")
+
+num = favorite_numbers['mariam']
+print(f"Maraiam's favorite number is {num}.")
+
+num = favorite_numbers['kolja']
+print(f"Koljas favorite number is {num}.")
+
+num = favorite_numbers['miqayel']
+print(f"Miqayel's favorite number is {num}.")
+
+num = favorite_numbers['lili']
+print(f"Lili's favorite number is {num}.")
+
+#6-3: Glossary
+Glossary = {
+    'variable': 'A label for a value.',
+    'string': 'A value made up of one or more charachters.',
+    'list': 'A collection of items in a specific order.',
+    'loop': 'Work though a collection of items in a particualr order.',
+    'tuples': "An ordered collection of items, that can't be modified.",
+    }
+word = 'variable'
+print(f"\n{word.title()}: {Glossary[word]}")
+
+word = 'string'
+print(f"\n{word.title()}: {Glossary[word]}")
+
+word = 'list'
+print(f"\n{word.title()}: {Glossary[word]}")
+
+word ='loop'
+print(f"\n{word.title()}: {Glossary[word]}")
+
+word = 'tuples'
+print(f"\n{word.title()}: {Glossary[word]}")
+
+##Looping through a dictionary
+#You can loop through a dictionary in three ways: you can loop through all the 
+# key-value pairs, all the keys, or all the values.
+#Dictionaries keep track of the order in which key-value pairs are added. 
+# If you want to process the information in a different order, you can sort the 
+# keys in your loop.
+
+#Looping through all key-value pairs:
+user_0 = {
+    'username': 'efermi',
+    'first': 'enrico',
+    'last': 'fermi'
+    }
+for key, value in user_0.items():
+    print(f'\nKey: {key}')
+    print(f"Value: {value}")
+
+fav_languages = {
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'ruby',
+    'phil': 'python',
+    }
+for name, language in fav_languages.items():
+    print(f"\n{name.title()}'s favorite language is {language.title()}.")
+
+#Looping through all the keys
+for name in fav_languages.keys():
+    print(name.title())
+
+friends = ['phil', 'sarah']
+for name in fav_languages.keys():
+    print(name.title())
+    if name in friends:
+        language = fav_languages[name].title()
+        print(f"\t{name.title()}, I see you love {language}!")
+#check if someone not in the list:
+if 'erin' not in fav_languages.keys():
+    print("Erin, please take our poll!")
+
+#Looping through all the keys in a cetrain order
+# with sorted() you can make a copy of the list in alphabetical order
+for name in sorted(fav_languages.keys()):
+    print(f"{name.title()}, thank you for taking the poll.")
+
+#Looping through all the values
+print("The following languages have bin mentioned:")
+for language in fav_languages.values():
+    print(language.title())
+#set() gives back the existing values, that are mentioned more than once  
+for language in set(fav_languages.values()):
+    print(language.title())
+
+#Exercises
+#6-4: Glossary 2
+Glossary = {
+    'variable': 'A label for a value.',
+    'string': 'A value made up of one or more charachters.',
+    'int': 'A numerical value without a decimal component.',
+    'float': 'A numerical value with a decimal component.',
+    'list': 'A collection of items in a specific order.',
+    'loop': 'Work though a collection of items in a particualr order.',
+    'for loop': "let's you work with each item in a lisr, one item at a time.", 
+    'tuples': "An ordered collection of items, that can't be modified.",
+    'boolean expression': 'An expression that evaluates to True or False.',
+    'debugging': 'A process of identifying the cause of a bug to fix the issue.',
+    }
+for word, definition in Glossary.items():
+    print(f"\n{word.title()}: {definition}")  
+
+#6-5: Rivers
+rivers = {
+    'nile': 'egypt',
+    'mississippi': 'united states',
+    'fraser': 'canada',
+    'spree': 'germany',
+    'volga': 'russland',
+    }
+for river, country in rivers.items():
+    print(f"The {river.title()} runs through {country.title()}.")  
+
+print("The following rivers are included in this data set:") 
+for river in rivers.keys():
+    print(f"- {river.title()}")
+
+print("The following countries are included in this data set:") 
+for country in rivers.values():
+    print(f"-{country.title()}")
+
+#6-6: Polling
+fav_languages = {
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'ruby',
+    'phil': 'python',
+    }
+for name, language in fav_languages.items():
+    print(f"{name.title()}'s favorite language is {language.title()}.")
+
+print("\n")
+coders = ['phil', 'josh', 'david', 'becca', 'sarah', 'matt', 'danielle']
+for coder in coders:
+    if coder in fav_languages.keys():
+        print(f"Thank you for taking the poll, {coder.title()}")
+    else:
+        print(f"{coder.title()}, what's your favorite programming language?")
+
+#Nesting ‒ A list of dictionaries
+#It's sometimes useful to store a set of dictionaries in a list; 
+# this is called nesting.
+alien_0 = {'color': 'green', 'points': 5}
+alien_1 = {'color': 'yellow', 'points': 10}
+alien_2 = {'color': 'red', 'points': 15}
+
+aliens = [alien_0, alien_1, alien_2]
+for alien in aliens:
+    print(alien)
+# Start with an empty list.
+aliens = []
+# Make 30 new aliens, and adds them to the list.
+for alien_number in range(30):
+    new_alien = {'color': 'green', 'points': 5, 'speed': 'slow'}
+    aliens.append(new_alien)
+# Show the first 5 aliens.
+for alien in aliens[:5]:
+    print(alien)
+print("...")
+#shows the total number of aliens.
+print(f"Total number of aliens: {len(aliens)}")
+
+#change the first 3 aliens
+print("\n")
+for alien in aliens [:3]:
+    if alien['color'] == 'green':
+        alien['color'] = 'yellow'
+        alien['speed'] = 'medium'
+        alien['points'] = 10
+for alien in aliens[:5]:
+    print(alien) 
+print('...')       
+
+#further changes
+print("\n")
+for alien in aliens[:3]:
+    if alien['color'] == 'green':
+        alien['color'] = 'yellow'
+        alien['speed'] = 'medium'
+        alien['points'] = 10
+    elif alien['color'] == 'yellow':
+        alien['color'] = 'red'
+        alien['speed'] = 'fast'
+        alien['points'] = 15
+for alien in aliens[:5]:
+    print(alien)
+
+#Nesting ‒ Lists in a dictionary
+#Storing a list inside a dictionary allows you to associate 
+# more than one value with each key.
+#Storing lists in a dictionary
+pizza = {
+    'crust': 'thick',
+    'toppings': ['mushrooms', 'extra cheese'],
+    }
+print(f"You ordered a {pizza['crust']}-crust pizza "
+    "with the following toppings:")
+for topping in pizza['toppings']:
+        print("\t-" + topping)
+
+fav_languages = {
+    'jen': ['python', 'ruby'],
+    'sarah': ['c'],
+    'edward': ['ruby', 'go'],
+    'phil': ['python', 'haskel'],
+    }
+for name, languages in fav_languages.items():
+    if len(languages) > 1:
+        print(f"\nGreat {name.title()}, you can more than one language:")
+        for language in languages:
+            print(f"\t-{language.title()}")
+    else: 
+            print(f"\n{name.title()}'s favorite languages are:")
+            print(f"\t-{language.title()}")
+
+#Levels of nesting
+#Nesting is extremely useful in certain situations. However, 
+# be aware of making your code overly complex. If you're 
+# nesting items much deeper than what you see here there are 
+# probably simpler ways of managing your data, such as using classes.
+
+#Nesting ‒ A dictionary of dictionaries
+#You can store a dictionary inside another dictionary. In this case 
+# each value associated with a key is itself a dictionary.
+
+# Storing dictionaries in a dictionary
+users = {
+'aeinstein': {
+    'first': 'albert',
+    'last': 'einstein',
+    'location': 'princeton',
+    },
+'mcurie': {
+    'first': 'marie',
+    'last': 'curie',
+    'location': 'paris',
+    },
+}
+for username, user_info in users.items():
+    print(f"\nUsername: {username}")
+    full_name = f"{user_info['first']} {user_info['last']}"
+    location = user_info['location']
+    print(f"\t Full name: {full_name.title()}")
+    print(f"\tLocation: {location.title()}")
+
+#6-7: People
+print("\n")
+# Make an empty list to store people in.
+people = []
+# Define some people, and add them to the list.
+person = {
+    'first_name': 'peter', 
+    'last_name': 'erwig', 
+    'age': 32, 
+    'city': 'cologne',
+    }
+people.append(person)
+
+person = {
+   'first_name': 'kolja', 
+    'last_name': 'landgraf', 
+    'age': 2, 
+    'city': 'linden', 
+    }
+people.append(person)
+
+person = {
+    'first_name': 'lili', 
+    'last_name': 'bado', 
+    'age': 5, 
+    'city': 'yerevan',
+}
+people.append(person)
+
+# Display all of the information in the dictionary.
+for person in people:
+    name = f"{person['first_name'].title()} {person['last_name'].title()}"
+    print(f"{name} of {person['city'].title()} is {person['age']}.")
+
+#6-8: Pets
+# Make an empty list to store the pets in.
+pets = []
+# Make individual pets, and store each one in the list.
+pet = {
+    'animal type': 'python',
+    'name': 'john',
+    'owner': 'guido',
+    'weight': 43,
+    'eats': 'bugs',
+    }
+pets.append(pet)
+pet = {
+    'animal type': 'chicken',
+    'name': 'clarence',
+    'owner': 'tiffany',
+    'weight': 2,
+    'eats': 'seeds',
+    }
+pets.append(pet)
+pet = {
+    'animal type': 'dog',
+    'name': 'peso',
+    'owner': 'eric',
+    'weight': 37,
+    'eats': 'shoes',
+    }
+pets.append(pet)
+# Display information about each pet.
+for pet in pets:
+    print(f"\nHere is what I know about {pet['name'].title()}:")
+    for key, value in pet.items():
+        print(f"\t{key}: {value}")
+
+#6-9: Favorite Places
+favorite_places = {
+    'lili': ['garten', 'cafe'],
+    'miqayel': ['kita', 'garten', "at grandma's"],
+    'mariam': ['cafe', 'lounge']
+    }
+for key, value in favorite_places.items():
+    print(f"\n{key.title()}'s favorite places are:")
+    for value in value:
+        print(f"\t-{value.title()}")
+#6-10: Favorite Numbers
+favorite_numbers = {
+    'peter': [32, 22, 15],
+    'mariam': [26, 57, 98],
+    'kolja': [38, 179, 88],
+    'miqayel': [2, 4, 8],
+    'lili': [38, 178, 14],
+    }
+for person, numbers in favorite_numbers.items():
+    print(f"\n{person.title()} likes the following numbers:")
+    for number in numbers:
+        print(f"\t{number}")
+
+#6-11: Cities
+cities = {
+    'berlin': {
+        'country': 'Germany',
+        'population': '3,645 Million',
+        'highest mountain': 'Arkenberg',
+        },
+    'yerevan': {
+        'country': 'Armenia',
+        'population': '1,075 Million',
+        'highest mountain': 'Ararat '  
+        },
+    'bergen': {
+        'country': 'Norway',
+        'population': '285,601 ',
+        'highest mountain': 'Fløyen',
+        }
+    }
+for city, city_info in cities.items():
+    country = city_info['country'].title()
+    population = city_info['population']
+    mountain = city_info['highest mountain'].title()
+    
+    print(f"\n{city.title()} is in {country}")
+    print(f"\tIt has a population of about {population}")
+    print(f"\tIt's highest mountain is {mountain}")
+#6-12 persons (extended)
+persons = {
+    'lili': { 
+        'last_name': 'bado', 
+        'age': 5, 
+        'city': 'yerevan',
+        },
+    'kolja': {
+        'last_name': 'landgraf', 
+        'age': 2, 
+        'city': 'linden',
+        }, 
+    'peter': {
+        'last_name': 'erwig', 
+        'age': 32, 
+        'city': 'cologne',
+        } 
+   } 
+
+for person, pers_info in persons.items():
+    name = pers_info['last_name'].title()
+    age = pers_info['age']
+    city = pers_info['city'].title()
+    
+    print(f"\n{person.title()} {name} is {age} years old.")
+    print(f"{person.title()} lives in {city}.") 
